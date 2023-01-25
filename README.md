@@ -18,6 +18,10 @@ Available variables are listed below, along with default values (see `defaults/m
 
 The major version of Logstash to install.
 
+    logstash_package: logstash
+
+The specific package to be installed. You can specify a version of the package using the correct syntax for your platform and package manager by changing the package name.
+
     logstash_listen_port_beats: 5044
 
 The port over which Logstash will listen for beats.
@@ -68,6 +72,10 @@ A list of Logstash configurations based on templates that should be copied.
       - 15-drupal
 
 A list of static Logstash filter configurations that should be copied.
+
+    logstash_setup_default_config: true
+
+Set this to `false` if you don't want to add the default config files shipped with this role (inside the `files/filters` directory). You can add your own configuration files inside `/etc/logstash/conf.d`.
 
 ## Generating a Self-signed certificate
 
