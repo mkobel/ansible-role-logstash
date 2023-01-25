@@ -8,7 +8,6 @@
     mode: 0644
   with_items: "{{ logstash_config_templates }}"
   when: logstash_setup_default_config
->>>>>>> 075293c7687394a59bc265cfcc6dfb1d3f8ca88e
   notify: restart logstash
 
 - name: Create Logstash filters.
